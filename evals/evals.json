@@ -1,0 +1,11 @@
+{
+  "skill_name": "litestar-auditor",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Audit the code in test_apps/audit_test_app/app.py. Check for NIH syndrome and best practice violations. Provide a structured report.",
+      "expected_output": "The report should identify: 1. Manual CORS middleware (NIH vs CORSConfig), 2. Manual Redis usage (NIH vs RedisStore), 3. Manual JWT verification (NIH vs Security backends), 4. Passing Request object to service (Best practice violation), 5. Manual JSON slicing (NIH vs DTOs).",
+      "files": ["test_apps/audit_test_app/app.py"]
+    }
+  ]
+}
